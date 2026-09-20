@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — To-Do List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <main class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <span class="eyebrow">MY PRODUCTIVITY</span>
+        <h1>Task<span>Flow</span></h1>
+        <p>Organize your day, one task at a time.</p>
+      </div>
+
+      <button id="themeBtn" class="icon-btn" title="Toggle theme">
+        ☾
+      </button>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <div>
+          <span>Total Tasks</span>
+          <strong id="totalTasks">0</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <div>
+          <span>Pending</span>
+          <strong id="pendingTasks">0</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">✓</div>
+        <div>
+          <span>Completed</span>
+          <strong id="completedTasks">0</strong>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Add Task -->
+    <section class="task-input">
+
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+        />
+      </div>
+
+      <select id="priority">
+        <option value="low">Low Priority</option>
+        <option value="medium" selected>Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+
+      <input type="date" id="dueDate" />
+
+      <button id="addBtn" class="add-btn">
+        <span>+</span>
+        Add Task
+      </button>
+
+    </section>
+
+    <!-- Toolbar -->
+    <section class="toolbar">
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <button id="clearCompleted" class="clear-btn">
+        Clear completed
+      </button>
+
+    </section>
+
+    <!-- Tasks -->
+    <section id="taskList" class="task-list"></section>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state">
+      <div class="empty-icon">✨</div>
+      <h2>No tasks here</h2>
+      <p>Add a task and start getting things done.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <span id="taskCount">0 tasks remaining</span>
+      <span>Saved automatically</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
