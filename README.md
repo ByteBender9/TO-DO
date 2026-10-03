@@ -72,11 +72,11 @@ Create tasks with:
 
 TaskFlow/
 │
-├── index.html       # Main application page
-├── style.css        # Application styling
-├── script.js        # Application logic
-├── README.md        # Project documentation
-└── LICENSE          # MIT License
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── LICENSE
 
 🚀 Getting Started
 
